@@ -1,0 +1,14 @@
+_ReSharper.*
+[Bb]in/
+[Oo]bj/
+[Nn]u[Gg]et[Bb]ackup/
+*.suo
+*.user
+*.userprefs
+*.cache
+*.orig
+Thumbs.db
+.DS_Store
+*.hash
+*.list
+src/packages/
