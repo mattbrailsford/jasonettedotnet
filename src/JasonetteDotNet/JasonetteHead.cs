@@ -14,7 +14,7 @@ namespace JasonetteDotNet
         [JsonProperty("icon", NullValueHandling = NullValueHandling.Ignore)]
         public string Icon { get; set; }
         
-        [JsonProperty("offline", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("offline", NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool Offline { get; set; }
 
         [JsonProperty("styles", NullValueHandling = NullValueHandling.Ignore)]
@@ -35,11 +35,6 @@ namespace JasonetteDotNet
             this.Actions = new Dictionary<string, JasonetteInlineAction>();
             this.Templates = new Dictionary<string, object>();
             this.Data = new Dictionary<string, object>();
-        }
-
-        public bool ShouldSerializeOffline()
-        {
-            return this.Offline;
         }
 
         public bool ShouldSerializeStyles()
