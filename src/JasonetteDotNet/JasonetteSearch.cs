@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteSearch
+    public class JasonetteSearch : JasonetteEntity
     {
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
@@ -15,7 +15,7 @@ namespace JasonetteDotNet
         public JasonetteAction Action { get; set; }
 
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         public JasonetteSearch()
         {

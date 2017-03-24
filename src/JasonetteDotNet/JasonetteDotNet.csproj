@@ -49,6 +49,7 @@
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="JasonetteAction.cs" />
     <Compile Include="JasonetteComponent.cs" />
+    <Compile Include="JasonetteEntity.cs" />
     <Compile Include="JasonetteFooterInput.cs" />
     <Compile Include="JasonetteFooter.cs" />
     <Compile Include="JasonetteControl.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="JasonetteLabelLayer.cs" />
     <Compile Include="JasonetteLabelMenu.cs" />
     <Compile Include="JasonetteLayer.cs" />
+    <Compile Include="JasonetteMixin.cs" />
     <Compile Include="JasonetteStyledComponent.cs" />
     <Compile Include="JasonetteImageTitle.cs" />
     <Compile Include="JasonetteInlineAction.cs" />

@@ -3,24 +3,22 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteBody
+    public class JasonetteBody : JasonetteEntity
     {
         [JsonProperty("header", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteHeader Header { get; set; }
         
         [JsonProperty("sections", NullValueHandling = NullValueHandling.Ignore)]
-        public List<JasonetteSection> Sections { get; set; }
+        public IList<JasonetteSection> Sections { get; set; }
 
         [JsonProperty("layers", NullValueHandling = NullValueHandling.Ignore)]
-        public List<JasonetteLayer> Layers { get; set; }
+        public IList<JasonetteLayer> Layers { get; set; }
         
         [JsonProperty("footer", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteFooter Footer { get; set; }
 
-        // TODO: background, border
-        // https://docs.jasonette.com/document/#bodystyle
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         public JasonetteBody()
         {

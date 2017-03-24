@@ -1,6 +1,6 @@
 ﻿namespace JasonetteDotNet
 {
-    public abstract class JasonetteTitle
+    public abstract class JasonetteTitle : JasonetteEntity
     {
         public abstract string Type { get; }
 

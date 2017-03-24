@@ -9,7 +9,7 @@ namespace JasonetteDotNet
         public string Type { get; set; }
 
         [JsonProperty("options", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Options { get; set; }
+        public IDictionary<string, object> Options { get; set; }
 
         [JsonProperty("success", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteAction Success { get; set; }

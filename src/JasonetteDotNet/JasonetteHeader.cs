@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteHeader
+    public class JasonetteHeader : JasonetteEntity
     {
         [JsonProperty("title", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteTitle Title { get; set; }
@@ -13,10 +13,9 @@ namespace JasonetteDotNet
 
         [JsonProperty("menu", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteMenu Menu { get; set; }
-
-        // TODO: font, size, background, color
+        
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         public JasonetteHeader()
         {

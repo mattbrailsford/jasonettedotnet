@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using JasonetteDotNet.Converters;
 using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteHead
+    public class JasonetteHead : JasonetteEntity
     {
         [JsonProperty("title", NullValueHandling = NullValueHandling.Ignore)]
         public string Title { get; set; }
@@ -19,16 +18,16 @@ namespace JasonetteDotNet
         public bool Offline { get; set; }
 
         [JsonProperty("styles", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, Dictionary<string, object>> Styles { get; set; }
+        public IDictionary<string, Dictionary<string, object>> Styles { get; set; }
 
         [JsonProperty("actions", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, JasonetteInlineAction> Actions { get; set; }
+        public IDictionary<string, JasonetteInlineAction> Actions { get; set; }
 
         [JsonProperty("templates", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Templates { get; set; }
+        public IDictionary<string, object> Templates { get; set; }
 
         [JsonProperty("data", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Data { get; set; }
+        public IDictionary<string, object> Data { get; set; }
 
         public JasonetteHead()
         {

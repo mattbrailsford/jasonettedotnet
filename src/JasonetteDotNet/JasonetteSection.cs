@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteSection
+    public class JasonetteSection : JasonetteEntity
     {
         [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteSectionType Type { get; set; }
@@ -12,7 +12,7 @@ namespace JasonetteDotNet
         public string Header { get; set; }
 
         [JsonProperty("items", NullValueHandling = NullValueHandling.Ignore)]
-        public List<JasonetteControl> Items { get; set; }
+        public IList<JasonetteControl> Items { get; set; }
 
         public JasonetteSection(IEnumerable<JasonetteControl> items, JasonetteSectionType type = JasonetteSectionType.Vertical)
             : this(null, items, type)

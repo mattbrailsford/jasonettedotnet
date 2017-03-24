@@ -6,7 +6,7 @@ namespace JasonetteDotNet
     public abstract class JasonetteStyledComponent : JasonetteComponent
     {
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         protected JasonetteStyledComponent()
         {

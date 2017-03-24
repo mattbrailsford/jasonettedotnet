@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteHref
+    public class JasonetteHref : JasonetteEntity
     {
         [JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
         public string Url { get; set; }
@@ -12,7 +12,7 @@ namespace JasonetteDotNet
         public string View { get; set; }
 
         [JsonProperty("options", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Options { get; set; }
+        public IDictionary<string, object> Options { get; set; }
 
         [JsonProperty("transition", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteHrefTransition Transition { get; set; }

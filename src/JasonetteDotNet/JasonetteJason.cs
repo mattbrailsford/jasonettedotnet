@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteJason
+    public class JasonetteJason : JasonetteEntity
     {
         [JsonProperty("head", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteHead Head { get; set; }
@@ -15,5 +15,10 @@ namespace JasonetteDotNet
             this.Head = new JasonetteHead();
             this.Body = new JasonetteBody();
         }
+
+        //public static JasonetteJason Mixin(string url, string path = null)
+        //{
+        //    return new JasonetteJason { MixinUrl = url };
+        //}
     }
 }

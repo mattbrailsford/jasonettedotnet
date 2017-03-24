@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteTab
+    public class JasonetteTab : JasonetteEntity
     {
         [JsonProperty("text", NullValueHandling = NullValueHandling.Ignore)]
         public string Text { get; set; }
@@ -23,9 +23,8 @@ namespace JasonetteDotNet
         [JsonProperty("action", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteAction Action { get; set; }
 
-        // TODO: width, height
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         public JasonetteTab()
         {

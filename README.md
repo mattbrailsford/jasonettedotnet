@@ -7,6 +7,7 @@ JasonetteDotNet is a strongly typed implementation of the [Jasonette](http://jas
 - [ ] Strongly type Head.Template
 - [ ] Create strongly typed style accessors
 - [ ] Serialize all structs to string
+- [ ] Allow mixins in other places other than just data
 
 ## Usage
 TODO

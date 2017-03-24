@@ -1,6 +1,6 @@
 namespace JasonetteDotNet
 {
-    public abstract class JasonetteAction
+    public abstract class JasonetteAction : JasonetteEntity
     {
         public static implicit operator JasonetteAction(string trigger)
         {

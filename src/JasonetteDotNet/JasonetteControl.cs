@@ -1,4 +1,4 @@
 namespace JasonetteDotNet
 {
-    public abstract class JasonetteControl { }
+    public abstract class JasonetteControl : JasonetteEntity { }
 }

@@ -11,9 +11,8 @@ namespace JasonetteDotNet
         [JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
         public string Url { get; set; }
 
-        // TODO: width, height
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         public JasonetteImageTitle(string url)
         {

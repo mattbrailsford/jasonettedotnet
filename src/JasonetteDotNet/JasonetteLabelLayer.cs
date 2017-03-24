@@ -15,7 +15,7 @@ namespace JasonetteDotNet
         public JasonetteAction Action { get; set; }
 
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         public JasonetteLabelLayer(string text, JasonetteAction action)
         {

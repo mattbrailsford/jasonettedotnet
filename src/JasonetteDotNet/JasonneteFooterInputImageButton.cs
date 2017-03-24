@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonneteFooterInputImageButton
+    public class JasonneteFooterInputImageButton : JasonetteEntity
     {
         [JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
         public string Url { get; set; }

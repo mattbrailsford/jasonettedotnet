@@ -2,7 +2,7 @@
 
 namespace JasonetteDotNet
 {
-    public class JasonetteDocument
+    public class JasonetteDocument : JasonetteEntity
     {
         [JsonProperty("$jason", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteJason Jason { get; set; }

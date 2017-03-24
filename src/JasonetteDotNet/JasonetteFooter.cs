@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteFooter
+    public class JasonetteFooter : JasonetteEntity
     {
         [JsonProperty("input", NullValueHandling = NullValueHandling.Ignore)]
         public JasonetteFooterInput Input { get; set; }

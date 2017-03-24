@@ -9,12 +9,10 @@ namespace JasonetteDotNet
         public JasonetteLayoutType Type { get; set; }
 
         [JsonProperty("components", NullValueHandling = NullValueHandling.Ignore)]
-        public List<JasonetteControl> Components { get; set; }
+        public IList<JasonetteControl> Components { get; set; }
 
-        // TODO: padding, spacing, background, z_index, opacity, align, distribution
-        // https://docs.jasonette.com/layout/#styling-a-layout
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         public JasonetteLayout(IEnumerable<JasonetteControl> components, JasonetteLayoutType type = JasonetteLayoutType.Vertical)
         {

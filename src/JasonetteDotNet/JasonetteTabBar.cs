@@ -5,14 +5,13 @@ using Newtonsoft.Json;
 
 namespace JasonetteDotNet
 {
-    public class JasonetteTabBar : IList<JasonetteTab>
+    public class JasonetteTabBar : JasonetteEntity, IList<JasonetteTab>
     {
         [JsonProperty("items", NullValueHandling = NullValueHandling.Ignore)]
-        public List<JasonetteTab> Items { get; set; }
+        public IList<JasonetteTab> Items { get; set; }
 
-        // TODO: width, height
         [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
-        public Dictionary<string, object> Style { get; set; }
+        public IDictionary<string, object> Style { get; set; }
 
         public JasonetteTabBar()
             : this(Enumerable.Empty<JasonetteTab>())
